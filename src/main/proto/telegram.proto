@@ -1,0 +1,10 @@
+syntax = "proto3";
+package pro.karagodin;
+
+message Message {
+  string text = 1;
+}
+
+service MessageService {
+  rpc send(stream Message) returns (stream Message);
+}
